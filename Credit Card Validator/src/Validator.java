@@ -11,12 +11,12 @@ public class Validator
 		public static void main(String[] args) throws IOException
 			{
 				Scanner file = new Scanner(new File("creditCardNumbers.txt"));
-				for (int i=0;i<100;i++)
+				while (file.hasNextLong())
 					{
 						ccNum = file.nextLong();
 						validate();
 					}
-				System.out.println("There are "+counter+" possible valid CC numbers");
+				System.out.println("There are "+counter+" possible valid Credit Card numbers");
 			}
 		public static void validate()
 		{
@@ -48,12 +48,12 @@ public class Validator
 				}
 			if (new2%10==0)
 				{
-					System.out.println("could be");
+					System.out.println("Could be a valid Credit Card Number");
 					counter++;
 				}
 			else
 				{
-					System.out.println("no");
+					System.out.println("Could NOT be a valid Credit Card Number");
 				}
 		}
 	}
